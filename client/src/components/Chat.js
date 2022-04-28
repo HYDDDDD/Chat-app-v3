@@ -69,8 +69,7 @@ function Chat({ socket, userName, room }) {
               {showUser.map((currentUsers) => {
                 return (
                   <div key={uuidv4()}>
-                    {/* className="p-3 bg-zinc-100 border-2 border-black mt-2 rounded-md" */}
-                    <div >
+                    <div>
                       <p className="text-blue-800">{currentUsers.username}</p>
                     </div>
                   </div>
@@ -89,7 +88,6 @@ function Chat({ socket, userName, room }) {
           <ScrollToBottom className="w-full h-full overflow-x-hidden">
             {messageList.map((messageContent) => {
               return (
-                // 450px max-width: calc(100% - 710px);
                 <div
                   className="flex space-x-2 mt-4 pr-3 rounded-xl w-16"
                   id={
@@ -104,7 +102,7 @@ function Chat({ socket, userName, room }) {
                   <div className="text-sm font-semibold p-1">
                     <p>{messageContent.author}</p>
                   </div>
-                  <div className="text-base text-white px-2">
+                  <div className="text-base px-2">
                     <p className="break-all">{messageContent.message}</p>
                     <span className="text-xs">{messageContent.time}</span>
                     <p>{messageContent.text}</p>

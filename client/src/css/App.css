@@ -24,7 +24,13 @@
   width: fit-content;
 }
 
-#you,
-#other {
-  max-width: calc(100% - 710px);
+#you, #other{
+  max-width: calc(80%);
+}
+
+@media only screen and (min-width: 768px) {
+  #you,
+  #other {
+    max-width: calc(100% - 710px);
+  }
 }

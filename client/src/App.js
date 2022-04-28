@@ -1,11 +1,11 @@
 import "./css/App.css";
-import { io } from "socket.io-client";
+import io from "socket.io-client";
 import { useState } from "react";
 import Chat from "./components/Chat";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const socket = io.connect("http://localhost:3001", {
+const socket = io.connect("https://fai-chat-app-version3.herokuapp.com/", {
   transports: ["websocket", "polling", "flashsocket"],
 });
 
@@ -52,7 +52,10 @@ function App() {
     }
 
     if (userName.length > 6) {
-      toast.error("Please enter your name less than 6 characters.", toastOptions);
+      toast.error(
+        "Please enter your name less than 6 characters.",
+        toastOptions
+      );
       return false;
     }
 
